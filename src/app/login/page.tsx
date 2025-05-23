@@ -1,12 +1,12 @@
+import Container from "@/components/Container";
 import LoginButton from "@/components/LoginButton";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 export default function Login() {
   return (
-    <div className="flex pt-20 flex-col items-center justify-center px-4">
+    <Container className="flex pt-12 lg:pt-20 flex-col items-center justify-center px-4">
       <div className="text-center space-y-4 flex flex-col items-center">
-        <h1 className="text-4xl lg:text-5xl font-bold">🍕 Welcome to Pizzahut</h1>
+        <h1 className="text-xl lg:text-5xl font-bold">🍕 Welcome to Pizzahut</h1>
         <p className="">Sign in to order your favorite slice!</p>
       <LoginButton/> 
       </div>
@@ -20,6 +20,6 @@ export default function Login() {
           height={313}
         />
       </div>
-    </div>
+    </Container>
   );
 }

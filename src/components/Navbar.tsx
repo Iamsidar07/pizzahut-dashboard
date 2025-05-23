@@ -6,20 +6,20 @@ import UserButton from "./UserButton";
 import { User } from "next-auth";
 import { Loader2 } from "lucide-react";
 import { useAuthState } from "./AuthProvider";
+import Container from "./Container";
 
 const Navbar = () => {
   const { data: session, status } = useSession();
   const { isLoggedIn } = useAuthState();
-  console.log(status, session);
 
   return (
-    <header className="border-b p-2 sm:py-2.5">
-      <div className="container mx-auto flex items-center justify-between gap-6">
+    <header className="border-b ">
+      <Container className="flex items-center justify-between gap-6 p-2 sm:py-2.5">
         <Link href="/">
-          <span className="text-2xl font-bold font-heading">🍕 Pizzahut</span>
+          <span className="text-2xl font-bold font-heading">🍕 <span className="hidden sm:inline-flex">Pizzahut</span></span>
         </Link>
         <nav>
-          <ul className="flex items-center gap-4">
+          <ul className="flex items-center gap-0 lg:gap-4">
             {status === "loading" ? (
               <Loader2 className="h-5 w-5 animate-spin" />
             ) : isLoggedIn && session?.user ? (
@@ -54,7 +54,7 @@ const Navbar = () => {
             )}
           </ul>
         </nav>
-      </div>
+      </Container>
     </header>
   );
 };

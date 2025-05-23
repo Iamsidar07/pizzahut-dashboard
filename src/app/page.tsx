@@ -1,4 +1,5 @@
 import { auth } from "@/auth";
+import Container from "@/components/Container";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,9 +7,9 @@ import Link from "next/link";
 export default async function Home() {
   const session = await auth();
   return (
-    <div className="flex pt-20 flex-col items-center justify-center px-4">
+    <Container className="flex p-4 pt-12 lg:pt-20 flex-col items-center justify-center px-4">
       <div className="text-center space-y-4">
-        <h1 className="text-4xl lg:text-5xl font-bold">
+        <h1 className="text-xl lg:text-5xl font-bold">
           🍕 Welcome to Pizzahut
         </h1>
         <p className="">Sign in to order your favorite slice!</p>
@@ -32,6 +33,6 @@ export default async function Home() {
           height={313}
         />
       </div>
-    </div>
+    </Container>
   );
 }

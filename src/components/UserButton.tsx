@@ -23,8 +23,7 @@ const UserButton = ({ user }: { user: User }) => {
       const result = await handleLogout();
       console.log("result", result);
       if (result.success) {
-        router.push("/");
-        router.refresh();
+        router.push("/login");
         updateLoginStatus(false);
       }
     } catch (error) {
