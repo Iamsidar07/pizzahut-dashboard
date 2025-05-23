@@ -1,6 +1,6 @@
 # Next.js Dashboard with Google Authentication
 
-## Hello, My name is Manoj Kumar 
+# Hello, My name is Manoj Kumar 
 
 A modern dashboard application built with Next.js 14, featuring Google OAuth authentication.
 
