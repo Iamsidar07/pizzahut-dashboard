@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Chewy, Plus_Jakarta_Sans } from "next/font/google";
+import { Chewy, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Provider from "@/components/Provider";
 
 const chewy = Chewy({
   variable: "--font-heading",
   subsets: ["latin"],
-  weight: ['400']
+  weight: ["400"],
 });
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -28,7 +30,12 @@ export default function RootLayout({
       <body
         className={`${plusJakartaSans.variable} ${chewy.variable} antialiased`}
       >
-        {children}
+        <Provider>
+          <div className="flex flex-col min-h-screen">
+            <Navbar />
+            <main className="flex-1">{children}</main>
+          </div>
+        </Provider>
       </body>
     </html>
   );
