@@ -16,7 +16,7 @@ const Navbar = () => {
     <header className="border-b ">
       <Container className="flex items-center justify-between gap-6 p-2 sm:py-2.5">
         <Link href="/">
-          <span className="text-2xl font-bold font-heading">🍕 <span className="hidden sm:inline-flex">Pizzahut</span></span>
+          <span className="text-2xl font-bold font-heading">🍕 <span className="hidden sm:inline-flex">pizzahut</span></span>
         </Link>
         <nav>
           <ul className="flex items-center gap-0 lg:gap-4">

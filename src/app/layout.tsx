@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Chewy, Plus_Jakarta_Sans } from "next/font/google";
+import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Provider from "@/components/Provider";
 import NextTopLoader from "nextjs-toploader";
 
-const chewy = Chewy({
+const headingFont = Plus_Jakarta_Sans({
   variable: "--font-heading",
   subsets: ["latin"],
   weight: ["400"],
 });
 
-const plusJakartaSans = Plus_Jakarta_Sans({
+const bodyFont = Inter({
   variable: "--font-body",
   subsets: ["latin"],
 });
@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${plusJakartaSans.variable} ${chewy.variable} antialiased`}
+        className={`${bodyFont.variable} ${headingFont.variable} antialiased`}
       >
         <Provider>
           <div className="flex flex-col min-h-screen">

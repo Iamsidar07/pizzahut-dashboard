@@ -4,11 +4,13 @@ import Image from "next/image";
 
 export default function Login() {
   return (
-    <Container className="flex pt-12 lg:pt-20 flex-col items-center justify-center px-4">
+    <Container className="flex pt-8 lg:pt-12 flex-col items-center justify-center px-4">
       <div className="text-center space-y-4 flex flex-col items-center">
-        <h1 className="text-xl lg:text-5xl font-bold">🍕 Welcome to Pizzahut</h1>
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">
+          🍕 Welcome to Pizzahut
+        </h1>
         <p className="">Sign in to order your favorite slice!</p>
-      <LoginButton/> 
+        <LoginButton />
       </div>
 
       <div className="mt-12">

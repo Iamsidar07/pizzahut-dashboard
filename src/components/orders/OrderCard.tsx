@@ -19,7 +19,7 @@ function getBadgeFromStatus(status: OrderStatus): string {
 
 const OrderCard = ({ order }: { order: PizzaOrder }) => {
   return (
-    <div className="max-w-sm mx-auto p-2 border bg-white rounded-lg shadow-sm">
+    <div className="max-w-sm mx-auto p-4 border bg-white shadow-sm">
       <h2 className="font-semibold mb-2 !font-body">{order.orderId}</h2>
       <h3 className="font-bold mb-4 !font-body">Order Details</h3>
       <div className="space-y-2 text-sm">
