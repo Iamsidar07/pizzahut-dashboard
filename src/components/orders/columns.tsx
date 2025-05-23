@@ -40,6 +40,7 @@ function getBadgeFromStatus(status: OrderStatus): string {
 export const columns: ColumnDef<PizzaOrder>[] = [
   {
     accessorKey: "orderId",
+    enableSorting: true,
     header: ({ column }) => {
       return (
         <Button
@@ -77,6 +78,7 @@ export const columns: ColumnDef<PizzaOrder>[] = [
   },
   {
     accessorKey: "orderDate",
+    enableSorting: true,
     header: ({ column }) => {
       return (
         <Button
