@@ -1,5 +1,5 @@
-import { OrderStatus, PizzaOrder, PizzaType } from "@/types/order";
-import ORDERS from "@/data/orders.json"
+import { PizzaOrder } from "@/types/order";
+import ORDERS from "@/data/orders.json";
 
 export const getOrders = async (): Promise<PizzaOrder[]> => {
     return new Promise((resolve) => {
