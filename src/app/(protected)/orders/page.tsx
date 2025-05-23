@@ -1,6 +1,11 @@
 import Container from "@/components/Container";
 import DisplayOrders from "@/components/orders/DisplayOrders";
 import { getOrders } from "@/lib/order";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Pizza Orders'
+}
 
 export default async function OrdersPage() {
   const orders = await getOrders();

@@ -1,5 +1,6 @@
 import { auth } from "@/auth";
 import Container from "@/components/Container";
+import { Metadata } from "next";
 
 export default async function HelloPage() {
   const session = await auth();
@@ -10,4 +11,12 @@ export default async function HelloPage() {
       </h1>
     </Container>
   );
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  const session = await auth();
+  const userName = session?.user?.name || "User";
+  return {
+    title: `Hello ${userName}`,
+  };
 }

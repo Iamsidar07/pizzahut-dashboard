@@ -1,6 +1,11 @@
 import Container from "@/components/Container";
 import LoginButton from "@/components/LoginButton";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Login to Pizzahut",
+};
 
 export default function Login() {
   return (
